@@ -2,7 +2,7 @@ self.addEventListener('install', function (e) {
   console.log('Service Worker Install');
   e.waitUntil(
     caches.open('custom-cache-1').then(function (cache) {
-      return cache.addAll(['/index.html', '/src/main.ts']);
+      return cache.addAll(['/']);
     })
   );
 });
