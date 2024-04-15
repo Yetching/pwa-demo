@@ -1,5 +1,5 @@
 self.addEventListener('install', function (e) {
-  console.log('Service Worker Install');
+  console.log('Service Worker Install V2');
   e.waitUntil(
     caches.open('custom-cache-1').then(function (cache) {
       return cache.addAll(['/']);
@@ -28,7 +28,7 @@ self.addEventListener('fetch', function (e) {
 });
 
 self.addEventListener('activate', function (e) {
-  console.log('Service Worker Activate');
+  console.log('Service Worker Activate V2');
 
   e.waitUntil(
     caches.keys().then(function (keys) {
